@@ -2,8 +2,7 @@
 
 import sys
 
-file_name = str(sys.argv[1])
-in_file = open(file_name, "r")
+in_file = open('classes.txt', "r")
 a = []
 for lines in in_file:
     a.append(lines.strip())
