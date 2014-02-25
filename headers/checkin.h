@@ -10,6 +10,7 @@ class CheckIn: Public Transaction
 {
 	public:
 		CheckIn(Person*, Item*):Transaction(Person*, Item*);
+		virtual ~Checkin();
 
 	protected:
 
