@@ -11,7 +11,7 @@ class CheckOut: Public Transaction
 	public:
 		CheckOut(Person*, Item*):Transaction(Person*, Item*);
 		virtual ~Checkout();
-		char getTyoe() const;
+		virtual char getType() const;
 
 	protected:
 
