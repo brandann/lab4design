@@ -11,10 +11,12 @@ class CheckOut: Public Transaction
 	public:
 		CheckOut(Person*, Item*):Transaction(Person*, Item*);
 		virtual ~Checkout();
+		char getTyoe() const;
 
 	protected:
 
 	private:
+		const char token = 'C';
 
 };
 
