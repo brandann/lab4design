@@ -9,14 +9,15 @@ class Item
 	public:
                 Item();
                 ~Item();
-                int quantity; // number of copies of the item
-                Format format; // such as hardcopy or ebook
+                 int getQuantity(); // return number of copies
 
 	protected:
 
 	private:
 	
-                int getQuantity(); // return number of copies
+	        int quantity; // number of copies of the item
+                Format format; // such as hardcopy or ebook
+  
 
 };
 
