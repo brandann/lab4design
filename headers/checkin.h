@@ -4,11 +4,14 @@
 #define CHECKIN_H
 
 #include <iostream>
-class CheckIn
+#include "transaction.h"
+#include "person.h"
+#include "item.h"
+
+class CheckIn: Public Transaction
 {
 	public:
-		CheckIn();
-		~CheckIn();
+		CheckIn(Person*, Item*);
 
 	protected:
 
