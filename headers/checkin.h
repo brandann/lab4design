@@ -11,10 +11,12 @@ class CheckIn: Public Transaction
 	public:
 		CheckIn(Person*, Item*):Transaction(Person*, Item*);
 		virtual ~Checkin();
+		char getType() const;
 
 	protected:
 
 	private:
+		const char token = 'R';
 
 };
 
