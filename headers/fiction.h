@@ -4,16 +4,16 @@
 #define FICTION_H
 
 #include <iostream>
-class Fiction
+class Fiction : public Book
 {
 	public:
 		Fiction();
 		~Fiction();
-
+		char getType(); // always returns "F"
 	protected:
 
 	private:
-
+		const char "F";
 };
 
 #endif // FICTION_H
