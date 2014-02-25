@@ -5,8 +5,6 @@
 
 #include <iostream>
 #include "transaction.h"
-#include "person.h"
-#include "item.h"
 
 class CheckIn: Public Transaction
 {
