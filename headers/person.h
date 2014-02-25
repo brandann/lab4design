@@ -8,6 +8,7 @@ using namespace std;
 class Person : public HashableItem {
 public:
   Person(string name, int id);
+  virtual ~Person()sx;
   string getName();
   int getId();
 private:
