@@ -3,7 +3,7 @@
 #ifndef PATRON_H
 #define PATRON_H
 
-# include "person.h"
+#include "person.h"
 
 class Patron : public Person {
 	public:
