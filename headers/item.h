@@ -38,21 +38,6 @@ public:
    //		     quantity is decremented by 1.
    ~Item();
    
-   //--------------------------------------------------------------------------
-   // getQuantity (Public)
-   // Returns the number of copies of an Item.
-   // Assumptions:   Quanity is correct.
-   // Precondition:  None.
-   // Postcondition: quantity is given to caller.
-   int getQuantity();
-   
-   //--------------------------------------------------------------------------
-   // isAvailable (Public)
-   // Returns the availability of an item.
-   // Assumptions:   availabile is correct.
-   // Precondition:  None.
-   // Postcondition: availabile is given to caller.
-   bool isAvailable();
    
    //--------------------------------------------------------------------------
    // getFormat (Public)
@@ -64,9 +49,16 @@ public:
 
 protected:
 
+   //--------------------------------------------------------------------------
+   // getQuantity (Public)
+   // Returns the number of copies of an Item.
+   // Assumptions:   Quanity is correct.
+   // Precondition:  None.
+   // Postcondition: quantity is given to caller.
+   int getQuantity();
+
 private:
    int quantity;  // number of copies of the item
-   bool available; // whether or not the book is available
    Format format; // such as hardcopy or ebook
                   // might be implemented with a hardcoded string at this point,
                   // since there is no current Format class.
