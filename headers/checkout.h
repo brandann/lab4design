@@ -4,11 +4,12 @@
 #define CHECKOUT_H
 
 #include <iostream>
-class CheckOut
+#include "transaction.h"
+
+class CheckOut: Public Transaction
 {
 	public:
-		CheckOut();
-		~CheckOut();
+		CheckOut(Person*, Item*);
 
 	protected:
 
