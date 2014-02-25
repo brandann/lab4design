@@ -3,17 +3,12 @@
 #ifndef PATRON_H
 #define PATRON_H
 
-#include <iostream>
-class Patron
-{
+# include "person.h"
+
+class Patron : public Person {
 	public:
-		Patron();
+		Patron(string name, int id);
 		~Patron();
-
-	protected:
-
-	private:
-
 };
 
 #endif // PATRON_H
