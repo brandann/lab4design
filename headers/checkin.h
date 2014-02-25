@@ -11,7 +11,7 @@ class CheckIn: Public Transaction
 	public:
 		CheckIn(Person*, Item*):Transaction(Person*, Item*);
 		virtual ~Checkin();
-		char getType() const;
+		virtual char getType() const;
 
 	protected:
 
