@@ -9,7 +9,8 @@
 class CheckOut: Public Transaction
 {
 	public:
-		CheckOut(Person*, Item*);
+		CheckOut(Person*, Item*):Transaction(Person*, Item*);
+		virtual ~Checkout();
 
 	protected:
 
