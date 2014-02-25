@@ -1,9 +1,8 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include "HashableItem.h"
+#include "hashableitem.h"
 
-using namespace std;
 
 class Person : public HashableItem {
 public:
