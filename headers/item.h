@@ -17,6 +17,8 @@ class Item
 	
 	        int quantity; // number of copies of the item
                 Format format; // such as hardcopy or ebook
+                // might be implemented with a hardcoded string at this point,
+                // since there is no current Format class.
   
 
 };
