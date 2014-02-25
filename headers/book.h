@@ -7,7 +7,6 @@
 // Implemented by:
 // A Book in in the library. Derived from Item.
 // Assumptions: Book contains all information needed to identify it.
-// base classes.
 //
 
 #ifndef BOOK_H
