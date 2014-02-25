@@ -15,6 +15,8 @@
 
 #include <iostream>
 
+#include "hashableitem.h"
+
 class Item
 {
 public:
@@ -45,9 +47,17 @@ public:
    int getQuantity();
    
    //--------------------------------------------------------------------------
-   // getFormat(Public)
+   // isAvailable (Public)
+   // Returns the availability of an item.
+   // Assumptions:   availabile is correct.
+   // Precondition:  None.
+   // Postcondition: availabile is given to caller.
+   bool isAvailable();
+   
+   //--------------------------------------------------------------------------
+   // getFormat (Public)
    // Returns the Format of an item.
-   // Assumptions:   Foramt is correct.
+   // Assumptions:   Format is correct.
    // Precondition:  None.
    // Postcondition: Format is given to caller.
    Format getFormat();
@@ -56,6 +66,7 @@ protected:
 
 private:
    int quantity;  // number of copies of the item
+   bool available; // whether or not the book is available
    Format format; // such as hardcopy or ebook
                   // might be implemented with a hardcoded string at this point,
                   // since there is no current Format class.
