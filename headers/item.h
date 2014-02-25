@@ -1,4 +1,4 @@
-//item.h
+// item.h
 
 #ifndef ITEM_H
 #define ITEM_H
@@ -7,12 +7,16 @@
 class Item
 {
 	public:
-		Item();
-		~Item();
+                Item();
+                ~Item();
+                int quantity; // number of copies of the item
+                Format format; // such as hardcopy or ebook
 
 	protected:
 
 	private:
+	
+                int getQuantity(); // return number of copies
 
 };
 
