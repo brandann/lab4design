@@ -11,7 +11,7 @@ class TransactionFactory
 	public:
 		TransactionFactory();
 		~TransactionFactory();
-		Transaction* build(Person*, Item*);
+		bool build(string, Person*, Item*);
 
 	protected:
 
