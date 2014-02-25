@@ -9,7 +9,7 @@
 class CheckIn: Public Transaction
 {
 	public:
-		CheckIn(Person*, Item*);
+		CheckIn(Person*, Item*):Transaction(Person*, Item*);
 
 	protected:
 
