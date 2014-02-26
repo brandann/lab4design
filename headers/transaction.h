@@ -1,5 +1,14 @@
 //transaction.h
 
+//--------------------------------------------------------------------------
+// Transaction
+// Designed by: Brandan Haertel, Erick House, Jennifer Kowalsky,
+//		Gary Mixson, Binh Nguyen
+// Implemented by: 
+// Base class for transactionable items (Checkin, Checkout, etc.)
+// Person must be a valid pointer to a person object
+// Item must be a valid pointer to a item objcet
+
 #ifndef TRANSACTION_H
 #define TRANSACTION_H
 
@@ -7,24 +16,28 @@
 #include "person.h"
 #include "item.h"
 
-// Transaction
-// tranaction holds person and item related to eachother for a
-// transaction child class.
-// Person must be a valid pointer to a person object
-// Item must be a valid pointer to a item objcet
 class Transaction
 {
 	public:
-		// default constructor, child classes to implement
-		// person and item stored.
+		//-----------------------------------------------------------
+		// constructor
+		// contructs an instance of Transaction
+		// Assumptions:   	All information needed to construct the
+		// 			Transaction is provided.
+   		// Precondition:  	Transaction information is supplied.
+   		// Postcondition: 	Transaction has been constructed.
+		// 			person and item stored.
 		virtual Transaction(Person*, Item*) = 0;
 		
-		// default deconstructor
+		//-----------------------------------------------------------
+		// destructor
+		// Destructs an istance if Transaction
+		// Assumptions:		Transaction exists
+		// Precondition:	Transaction exists
+		// Postcondition:	Transaction has been destroyed
+		//			Transaction instance has been removed
+		//			from Person, and Item
 		virtual ~Transaction();
-		
-		// getType()
-		// returns the char token of the child class
-		virtual char getType() const = 0;
 
 	protected:
 
