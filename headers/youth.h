@@ -34,7 +34,7 @@ public:
    // Precondition: None.
    // Postcondition: type is given to caller.
    // Sample call: int type = getType();
-   char getType(); // always returns "Y"
+   char getType() const; // always returns "Y"
 
 protected:
 
