@@ -38,7 +38,6 @@ public:
    //		     quantity is decremented by 1.
    ~Item();
    
-   
    //--------------------------------------------------------------------------
    // getFormat (Public)
    // Returns the Format of an item.
@@ -46,6 +45,30 @@ public:
    // Precondition:  None.
    // Postcondition: Format is given to caller.
    Format getFormat();
+   
+   //--------------------------------------------------------------------------
+   // operator== (Public)
+   // Returns true is this and rhs are equal
+   // Assumptions:   rhs is a valid Item
+   // Precondition:  rhs is not NULL
+   // Postcondition: bool is given to caller.
+   virtual bool Item::operator==( const Item& rhs) const;
+   
+   //--------------------------------------------------------------------------
+   // operator> (Public)
+   // Returns true if this is greater then rhs
+   // Assumptions:   rhs is a valid Item
+   // Precondition:  rhs is not NULL
+   // Postcondition: bool is given to caller.
+   virtual bool Item::operator>( const Item& rhs) const;
+   
+   //--------------------------------------------------------------------------
+   // operator< (Public)
+   // Returns true if this is less than rhs
+   // Assumptions:   rhs is a valid Item
+   // Precondition:  rhs is not NULL
+   // Postcondition: bool is given to caller.
+   virtual bool Item::operator<( const Item& rhs) const;
 
 protected:
 
