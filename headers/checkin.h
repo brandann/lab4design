@@ -29,7 +29,7 @@ class CheckIn: Public Transaction
 		// 			person and item stored.
 		CheckIn(Person*, Item*):Transaction(Person*, Item*);
 		
-		//--------------------------------------------------------------------------
+		//-----------------------------------------------------------
 		// getType (Public)
    		// Returns the type of the transaction
    		// Assumptions: 	type is correct.
