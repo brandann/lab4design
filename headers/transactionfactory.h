@@ -1,37 +1,63 @@
 //transactionfactory.h
 
+//--------------------------------------------------------------------------
+// TransactionFactory
+// Designed by: Brandan Haertel, Erick House, Jennifer Kowalsky,
+//		Gary Mixson, Binh Nguyen
+// Implemented by: 
+// parses and returns a clone of a Transaction item
+
 #ifndef TRANSACTIONFACTORY_H
 #define TRANSACTIONFACTORY_H
 
 #include <iostream>
 #include "transaction.h"
 
-// TransactionFactory
-// parses and returns a clone of a Transaction item
 class TransactionFactory
 {
 	public:
-		// TransactionFactory
-		// Default constructor
+		//-----------------------------------------------------------
+		// constructor
+		// contructs an instance of TransactionFactory
+		// Assumptions:   	All information needed to construct the
+		// 			TransactionFactory is provided.
+   		// Precondition:  	TransactionFactory information is supplied.
+   		// Postcondition: 	TransactionFactory has been constructed.
 		TransactionFactory();
 		
-		// ~TransactionFactory
-		// Default deconsructor
+		//-----------------------------------------------------------
+		// destructor
+		// destroys the instance of TransactionFactory
+		// Assumptions:   	TransactionFactory has been constructed
+   		// Precondition:  	None.
+   		// Postcondition: 	TransactionFactory is destroyed
+   		//			member memory is freed.
 		~TransactionFactory();
 		
-		// build
-		// parses the string token, and creates a Transaction
+		//-----------------------------------------------------------
+		// build (Public)
+   		// parses the string token, and creates a Transaction
 		// item with Person and Item.
-		// string must be category token
-		// Person must be valid pointer to Person object
-		// Item must be valid pointer to Item object
-		bool build(string, Person*, Item*);
+   		// Assumptions: 	parameters are correct.
+   		// Precondition: 	string must be category token
+		// 			Person must be valid pointer to Person object
+		// 			Item must be valid pointer to Item object
+   		// Postcondition:	transaction instance is returned
+		Transaction* build(string, Person*, Item*);
 
 	protected:
 
 	private:
 		// Transaction array of Transaction children
 		Transaction *transaction;
+		
+		//-----------------------------------------------------------
+		// hash (Private)
+		// rerurns the hash of the string identifier
+		// Assumptions:   	string is a valid transaction identifier
+   		// Precondition:  	string is hashable
+   		// Postcondition: 	int of hashed string is returned
+   		int hash(const string) const;
 
 };
 
