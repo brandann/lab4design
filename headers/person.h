@@ -33,7 +33,7 @@ public:
   // Assumptions: None
   // Precondition: None
   // Postcondition: Person has been destroyed.
-  virtual ~Person()sx;
+  ~Person();
   
   //-----------------------------------------------------------
   // getName (Public)
